@@ -13,8 +13,14 @@ public class AliController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontal = Input.GetAxis("Horizontal");  //left and right movement
+        float vertical = Input.GetAxis("Vertical");  //up and down movement
+
+        //Debug.Log(horizontal);  //writes values to console screen
+        Debug.Log(vertical); 
         Vector2 position = transform.position;
-        position.x = position.x + 0.01f;
+        position.x = position.x + 3.0f * horizontal * Time.deltaTime;
+        position.y = position.y + 3.0f * vertical * Time.deltaTime;
         transform.position = position;
     }
 }
