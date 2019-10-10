@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class AliController : MonoBehaviour
 {
+    private float moveSpeed;
+    private Animator animator;
+    private float xposition;
+    private bool facingRight = true;
+    private Vector3 localRotation;
+    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
