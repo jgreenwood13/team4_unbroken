@@ -30,12 +30,12 @@ public class AliController : MonoBehaviour
         //print("Update");
         //xposition = Input.GetAxis("Horizontal");  //left and right movement
         xposition = Input.GetAxis("Horizontal");
-        print(xposition);
+        //print(xposition);
 
         //if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         if (xposition > 0.5)
         {
-            print("if statement");
+            //print("if statement");
             transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             animator.SetBool("IsRunning", true);
             transform.position += new Vector3(xposition, 0f, 0f) * moveSpeed * Time.deltaTime;
@@ -43,17 +43,17 @@ public class AliController : MonoBehaviour
         //else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         else if (xposition < -.5)
         {
-            print("else if");
+            //print("else if");
             transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
             animator.SetBool("IsRunning", true);
             transform.position += new Vector3(xposition, 0f, 0f) * moveSpeed * Time.deltaTime;
         }
         else
         {
-            print("else statement");
+            //print("else statement");
             transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
             animator.SetBool("IsRunning", false);
-            transform.position += new Vector3(xposition, 0f, 0f) * moveSpeed * Time.deltaTime;
+            //transform.position += new Vector3(xposition, 0f, 0f) * moveSpeed * Time.deltaTime;
 
         }
     }
@@ -62,12 +62,14 @@ public class AliController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("IsJumping", true);
-            animator.SetBool("IsLanding", true);
+            print("jump on");
+            animator.SetBool("IsJumpingOn", true);
+            //animator.SetBool("IsJumpingOn", false);
         }
         else
         {
-            animator.SetBool("IsJumping", false);
+            print("jump off");
+            animator.SetBool("IsJumpingOn", false);
         }
     }
 }
