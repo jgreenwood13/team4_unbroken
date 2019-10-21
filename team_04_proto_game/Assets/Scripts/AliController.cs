@@ -23,6 +23,7 @@ public class AliController : MonoBehaviour
     {
         moveHorizontal();
         Jump();
+        
     }
 
     void moveHorizontal()
