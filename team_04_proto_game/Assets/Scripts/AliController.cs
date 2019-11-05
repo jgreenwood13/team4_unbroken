@@ -28,11 +28,9 @@ public class AliController : MonoBehaviour
     void moveHorizontal()
     {
         //print("Update");
-        //xposition = Input.GetAxis("Horizontal");  //left and right movement
         xposition = Input.GetAxis("Horizontal");
         //print(xposition);
 
-        //if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         if (xposition > 0.5)
         {
             //print("if statement");
@@ -40,7 +38,6 @@ public class AliController : MonoBehaviour
             animator.SetBool("IsRunning", true);
             transform.position += new Vector3(xposition, 0f, 0f) * moveSpeed * Time.deltaTime;
         }
-        //else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         else if (xposition < -.5)
         {
             //print("else if");
