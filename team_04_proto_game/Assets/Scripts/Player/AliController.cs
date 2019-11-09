@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class AliController : MonoBehaviour
 {
-    private float moveSpeed;
+    public float Speed;
+    public Animator animator;
+    public bool MoveRight;
+    public bool MoveLeft;
+    public bool Jump;
+    /*private float moveSpeed;
     private Animator animator;
     private float xposition;
     private Vector3 localRotation;
@@ -69,5 +74,5 @@ public class AliController : MonoBehaviour
             print("jump off");
             animator.SetBool("IsJumpingOn", false);
         }
-    }
+    }*/
 }
