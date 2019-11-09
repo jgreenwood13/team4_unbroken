@@ -36,25 +36,5 @@ public class KeyboardInput : MonoBehaviour
             VirtualInputManager.Instance.Jump = false;
         }
     }
-    /* Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.D))
-        {
-            VirtualInputManager.Instance.MoveRight = true;
-        }
-        else
-        {
-            VirtualInputManager.Instance.MoveRight = false;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            VirtualInputManager.Instance.MoveLeft = true;
-        }
-        else
-        {
-            VirtualInputManager.Instance.MoveLeft = false;
-        }
-    }*/
+  
 }
