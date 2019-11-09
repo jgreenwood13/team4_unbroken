@@ -33,7 +33,7 @@ public class MoveForward : StateData
         if (control.MoveRight)
         {
             /* DONT NEED TO SWITCH TO RUN (THIS IS RUN SCRIPT), JUST MOVE */
-            control.transform.Translate(Vector3.forward * control.Speed * Time.deltaTime);
+            control.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
             control.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             //animator.SetBool("IsRunning", true);
         }
@@ -41,7 +41,7 @@ public class MoveForward : StateData
         if (control.MoveLeft)
         {
             /* DONT NEED TO SWITCH TO RUN (THIS IS RUN SCRIPT), JUST MOVE */
-            control.transform.Translate(Vector3.forward * control.Speed * Time.deltaTime);
+            control.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
             control.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             //animator.SetBool("IsRunning", true);
         }

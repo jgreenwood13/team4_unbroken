@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AliController : MonoBehaviour
 {
-    public float Speed;
     public Animator animator;
     public bool MoveRight;
     public bool MoveLeft;
