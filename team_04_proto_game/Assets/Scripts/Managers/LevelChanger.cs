@@ -6,18 +6,15 @@ public class LevelChanger : MonoBehaviour
     public Animator animator;
     private int levelToLoad;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            FadeToNextLevel();
+    void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E)) {
+            FadeToLevel(2);
         }
     }
 
-    public void FadeToNextLevel() {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    // public void FadeToNextLevel() {
+    //     FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+    // }
 
     public void FadeToLevel(int levelIndex) {
         levelToLoad = levelIndex;
