@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArmedBomb : MonoBehaviour
 {
-    public float delay = 10f;
+    float delay;
     float countdown;
     bool hasExploded = false;
 
@@ -13,15 +13,14 @@ public class ArmedBomb : MonoBehaviour
 
     public GameObject explosionEffect;
     public ParticleSystem fire;
+    public CountdownTimer timer; // connects countdown timer script to armed bomb script
  
     // Start is called before the first frame update
     void Start()
     {
-        //CountdownTimer timer = GetComponent<CountdownTimer>();
-        //delay = timer.timeLeft;
-
-        countdown = delay;
-        //fire.gameObject.SetActive(true);
+       delay = timer.timeLeft;
+       //print(timer.timeLeft); 
+       countdown = delay;
 
 
     }
@@ -29,12 +28,14 @@ public class ArmedBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //print(countdown);
+        //print(Time.deltaTime);
         countdown -= Time.deltaTime;
+
         if (countdown <= 0f && !hasExploded)
         {
             Explode();
-            //Debug.Log("Boom");
+            // Debug.Log("Boom");
             hasExploded = true;
         }
 
@@ -43,32 +44,32 @@ public class ArmedBomb : MonoBehaviour
 
     void Explode()
     {
+        // Show effect
         Instantiate(explosionEffect, transform.position, transform.rotation);
-        Debug.Log("Boom");
+        //Debug.Log("Boom");
 
-        //Get nearby objects
+        // Get nearby objects
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider nearbyObject in colliders)
         {
-            //Add force
+            // Add force
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.AddExplosionForce(force, transform.position, radius);
             }
-            //Damage
+            // Damage
             Destructible dest = nearbyObject.GetComponent<Destructible>();
             if (dest != null)
             {
                 dest.Destroy();
             }
         }
+        // Show fire effect (may need to stop once passed level)
         fire.Play();
 
-        //Remove bomb
+        // Remove bomb
         Destroy(gameObject);
-        //fire.Play();
-        //Instantiate(fire, transform.position, transform.rotation);
 
     }
 }

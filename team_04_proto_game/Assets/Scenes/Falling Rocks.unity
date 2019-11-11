@@ -445,6 +445,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472424224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 703373066415651069, guid: 3d6363982d0efc04688ad9a838e37b7e,
+    type: 3}
+  m_PrefabInstance: {fileID: 703373065916801861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1c305b9a7e55f4cb711e30db113e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &495838623
 GameObject:
   m_ObjectHideFlags: 0
@@ -5573,12 +5585,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e93e7d62d6b3d4197111c5efbb2917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
   radius: 5
   force: 700
   explosionEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 3}
   fire: {fileID: 495838625}
+  timer: {fileID: 472424224}
 --- !u!4 &698508616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7665215c8eddc0a44a216110cdeced13,
