@@ -14,6 +14,8 @@ public class ArmedBomb : MonoBehaviour
     public GameObject explosionEffect;
     public ParticleSystem fire;
     public CountdownTimer timer; // connects countdown timer script to armed bomb script
+    public AudioSource explodeSound;
+    public AudioSource fireCrackling;
  
     // Start is called before the first frame update
     void Start()
@@ -21,8 +23,6 @@ public class ArmedBomb : MonoBehaviour
        delay = timer.timeLeft;
        //print(timer.timeLeft); 
        countdown = delay;
-
-
     }
 
     // Update is called once per frame
@@ -41,11 +41,11 @@ public class ArmedBomb : MonoBehaviour
 
     }
 
-
     void Explode()
     {
         // Show effect
         Instantiate(explosionEffect, transform.position, transform.rotation);
+        explodeSound.Play();
         //Debug.Log("Boom");
 
         // Get nearby objects
@@ -67,6 +67,7 @@ public class ArmedBomb : MonoBehaviour
         }
         // Show fire effect (may need to stop once passed level)
         fire.Play();
+        fireCrackling.Play();
 
         // Remove bomb
         Destroy(gameObject);
