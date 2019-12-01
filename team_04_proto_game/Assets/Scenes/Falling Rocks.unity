@@ -6716,8 +6716,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1546037332}
   - component: {fileID: 1546037331}
-  - component: {fileID: 1546037333}
-  - component: {fileID: 1546037334}
   m_Layer: 10
   m_Name: Dumpster
   m_TagString: Untagged
@@ -6788,45 +6786,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1546037333
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546037330}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -14, y: -3}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 100, y: 100}
-    newSize: {x: 100, y: 100}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 40, y: 40}
-  m_EdgeRadius: 0
---- !u!114 &1546037334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546037330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61cbdceb82b0237479ed0336aa417a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyedVersions: {fileID: 0}
 --- !u!1 &1623770134
 GameObject:
   m_ObjectHideFlags: 0
@@ -17620,7 +17579,7 @@ PrefabInstance:
     - target: {fileID: 4054734892475487548, guid: 448d69e6c211e454a9c1f8c94cc1275e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 448d69e6c211e454a9c1f8c94cc1275e, type: 3}
@@ -18040,7 +17999,7 @@ PrefabInstance:
     - target: {fileID: 5400531080054728512, guid: 4d04eb1410baea0408e445bece34a837,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d04eb1410baea0408e445bece34a837, type: 3}
