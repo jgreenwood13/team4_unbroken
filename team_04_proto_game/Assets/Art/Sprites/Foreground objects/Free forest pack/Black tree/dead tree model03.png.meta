@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:team_04_proto_game/Assets/Art/Foreground objects/Free forest pack/Black tree/dead tree model03.png.meta
+guid: 151c35c7f726e426dafcc78aadb8e569
+=======
 guid: 9d8d84316e045a140a67ad9c19c778d3
+>>>>>>> a00303cc8227647df34d5c1e23f6511af7d365e1:team_04_proto_game/Assets/Art/Sprites/Foreground objects/Free forest pack/Black tree/dead tree model03.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
