@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13590bd8f99afa449acbcc5b190e7653, type: 3}
   m_Name: Jump_Normal
   m_EditorClassIdentifier: 
-  JumpForce: 1000
+  JumpForce: 800
