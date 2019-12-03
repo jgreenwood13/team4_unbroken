@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13590bd8f99afa449acbcc5b190e7653, type: 3}
-  m_Name: Jump_Normal
+  m_Script: {fileID: 11500000, guid: 51455e13319806042a8ed183890afe30, type: 3}
+  m_Name: Jump_Normal_GroundDetector
   m_EditorClassIdentifier: 
-  JumpForce: 800
+  Distance: 0.025
