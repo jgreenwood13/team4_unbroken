@@ -29,3 +29,11 @@ Update Mode: updateDependencies
 The following packages were updated:
   com.unity.ide.vscode from version 1.1.0 to 1.1.2
   com.unity.postprocessing from version 2.0.3-preview to 2.1.2
+
+=== Tue Dec  3 11:21:28 2019
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ide.vscode from version 1.1.0 to 1.1.2
