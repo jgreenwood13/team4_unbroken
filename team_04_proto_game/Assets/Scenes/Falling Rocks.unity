@@ -6483,7 +6483,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1722633891
 SpriteRenderer:
@@ -6542,8 +6542,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722633889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.85, y: -5.63, z: 0}
-  m_LocalScale: {x: 65, y: 1.3, z: 5}
+  m_LocalPosition: {x: -4.5, y: -5.63, z: 0}
+  m_LocalScale: {x: 68.5, y: 1.3, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
