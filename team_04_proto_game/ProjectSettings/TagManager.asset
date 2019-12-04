@@ -56,3 +56,6 @@ TagManager:
   - name: Buildings
     uniqueID: 726837437
     locked: 0
+  - name: Timer
+    uniqueID: 1911614799
+    locked: 0
