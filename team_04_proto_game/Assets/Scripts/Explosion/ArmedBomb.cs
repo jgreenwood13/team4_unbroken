@@ -20,7 +20,7 @@ public class ArmedBomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       delay = timer.timeLeft;
+       //delay = timer.timeLeft;
        //print(timer.timeLeft); 
        countdown = delay;
     }
@@ -59,11 +59,11 @@ public class ArmedBomb : MonoBehaviour
                 rb.AddExplosionForce(force, transform.position, radius);
             }
             // Damage
-            Destructible dest = nearbyObject.GetComponent<Destructible>();
+            /*Destructible dest = nearbyObject.GetComponent<Destructible>();
             if (dest != null)
             {
                 dest.Destroy();
-            }
+            }*/
         }
         // Show fire effect (may need to stop once passed level)
         fire.Play();
