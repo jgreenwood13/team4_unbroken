@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ArmedBomb : MonoBehaviour
 {
@@ -13,7 +15,8 @@ public class ArmedBomb : MonoBehaviour
     public float force = 700;
 
     public GameObject explosionEffect;
-    public ParticleSystem fire;
+    public GameObject fire1;
+    public GameObject fire2;
     public CountdownTimer timer; // connects countdown timer script to armed bomb script
     public AudioSource explodeSound;
     public AudioSource fireCrackling;
@@ -29,13 +32,13 @@ public class ArmedBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(countdown);
+        print(countdown);
         //print(Time.deltaTime);
         countdown -= Time.deltaTime;
 
         if (countdown <= 0f && !hasExploded)
         {
-            //Explode();
+            Explode();
             // Debug.Log("Boom");
             hasExploded = true;
         }
@@ -46,11 +49,11 @@ public class ArmedBomb : MonoBehaviour
     {
         // Show effect
         Instantiate(explosionEffect, transform.position, transform.rotation);
-        //explodeSound.Play();
+        explodeSound.Play();
         //Debug.Log("Boom");
 
         // Get nearby objects
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+       /* Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider nearbyObject in colliders)
         {
             // Add force
@@ -64,10 +67,13 @@ public class ArmedBomb : MonoBehaviour
             if (dest != null)
             {
                 dest.Destroy();
-            }*/
-        }
+            }
+        }*/
         // Show fire effect (may need to stop once passed level)
-        fire.Play();
+        Instantiate(fire1, transform.position, transform.rotation);
+        Instantiate(fire2, transform.position, transform.rotation);
+
+        //fire.Play();
         fireCrackling.Play();
 
         // Remove bomb
