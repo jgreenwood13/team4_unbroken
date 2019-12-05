@@ -39,7 +39,7 @@ public class GroundDetection : StateData
         }
         foreach(GameObject o in ali.BottomSpheres)
         {
-            Debug.DrawRay(o.transform.position, -Vector3.up * 0.7f, Color.yellow);
+            //Debug.DrawRay(o.transform.position, -Vector3.up * 0.7f, Color.yellow);
             RaycastHit hit;
             if (Physics.Raycast(o.transform.position, -Vector3.up, out hit, Distance))
             {
