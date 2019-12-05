@@ -32,7 +32,7 @@ public class ArmedBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(countdown);
+        //print(countdown);
         //print(Time.deltaTime);
         countdown -= Time.deltaTime;
 
