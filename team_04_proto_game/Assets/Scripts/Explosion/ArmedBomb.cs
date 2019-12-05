@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArmedBomb : MonoBehaviour
 {
+
     float delay;
     float countdown;
     bool hasExploded = false;
@@ -20,7 +21,7 @@ public class ArmedBomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //delay = timer.timeLeft;
+        delay = timer.timeLeft;
        //print(timer.timeLeft); 
        countdown = delay;
     }
@@ -34,7 +35,7 @@ public class ArmedBomb : MonoBehaviour
 
         if (countdown <= 0f && !hasExploded)
         {
-            Explode();
+            //Explode();
             // Debug.Log("Boom");
             hasExploded = true;
         }
@@ -45,7 +46,7 @@ public class ArmedBomb : MonoBehaviour
     {
         // Show effect
         Instantiate(explosionEffect, transform.position, transform.rotation);
-        explodeSound.Play();
+        //explodeSound.Play();
         //Debug.Log("Boom");
 
         // Get nearby objects
